@@ -1,4 +1,4 @@
-# [neilljohnston.com](neilljohnston.com)
+# [neilljohnston.com](http://neilljohnston.com)
 
 The source for my webpage.
 
