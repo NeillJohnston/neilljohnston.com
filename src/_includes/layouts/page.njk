@@ -1,0 +1,44 @@
+---
+# Generic HTML page with navigation
+layout: layouts/base.njk
+---
+
+<body class="cf-ns pa3 pa5-ns helvetica near-black bg-near-white">
+    <header class="fl-ns mr4-ns mb3 tl tr-ns">
+        <h1 class="lh-title f4 mt0 pa1 pb0 bg-theme">Neill Johnston</h1>
+        <nav class="pl1 pr1 f6 lh-copy">
+            <ul class="list cf pl0">
+                {% for link in site.navigation %}
+                <li class="fl mr3 fn-ns mr0-ns">
+                    <a class="link underline near-black dim" href="{{ link.href }}">
+                        {{ link.label }}
+                    </a>
+                </li>
+                {% endfor %}
+                <br />
+                {% for link in site.links %}
+                <li class="fl mr3 fn-ns mr0-ns">
+                    <a
+                        {% if link.label === 'email' %}
+                        id="email"
+                        {% endif %}
+                        class="link underline near-black dim" href="{{ link.href }}"
+                    >
+                        {{ link.label }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </header>
+    <main class="fl-ns">
+        {{ content | safe }}
+    </main>
+</body>
+<script>
+    // Assuming this is enough address munging for me - if a bot wants to run JS
+    // to spam me that's fine I guess, I just don't want to have to take out the
+    // mailto link
+    const email = document.getElementById('email');
+    email.href = email.href.replace(/-.*-/, '');
+</script>

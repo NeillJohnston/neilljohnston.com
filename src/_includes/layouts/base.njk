@@ -1,0 +1,16 @@
+---
+# Base HTML page with CSS, favicon, and page title
+---
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+        <link rel="stylesheet" type="text/css" href="/bundle.css" />
+        <link rel="shortcut icon" type="image/png" href="/favicon-32.png" />
+        <title>{{ title }}</title>
+    </head>
+    {{ content | safe }}
+</html>

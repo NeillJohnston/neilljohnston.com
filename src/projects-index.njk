@@ -1,0 +1,23 @@
+---
+layout: layouts/page.njk
+title: Projects
+permalink: /projects/
+---
+
+<h1 class="lh-title measure mt0">
+    Projects
+</h1>
+<ul class="list measure mt0 pl0">
+    {% for post in collections.projects %}
+    <li class="mb4 ml1 bl bw3 pl3 b--theme">
+        <h3 class="lh-title f4 ma0 mb1">
+            <a class="link underline near-black dim" href="{{ post.url }}">
+                {{ post.data.title }}
+            </a>
+        </h3>
+        <div class="lh-title f6">
+            <em>{{ post.data.summary }}</em>
+        </div>
+    </li>
+    {% endfor %}
+</ul

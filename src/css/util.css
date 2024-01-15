@@ -1,0 +1,24 @@
+:root {
+    --theme: #9ecf8d;
+}
+
+.bg-theme {
+    background-color: var(--theme);
+}
+
+.b--theme {
+    border-color: var(--theme);
+}
+
+hr {
+    background-color: var(--theme);
+    /* pa1 b0 */
+    padding: .25rem;
+    border: none;
+}
+
+h2, h3, h4, h5, h6 {
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--theme);
+}

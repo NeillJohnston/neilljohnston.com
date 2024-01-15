@@ -1,0 +1,61 @@
+/* Markdown-specific CSS fixes */
+
+.markdown *:first-child {
+    /* mt0 */
+    margin-top: 0;
+}
+
+.markdown a {
+    /* link underline near-block dim */
+    text-decoration: underline;
+    transition: color .15s ease-in;
+    color: #111111;
+    opacity: 1;
+    transition:opacity .15s ease-in
+}
+
+.markdown a:hover, .markdown a:focus {
+    opacity: .5;
+    transition: opacity .15s ease-in;
+}
+
+.markdown a:active {
+    opacity: .8;
+    transition: opacity .15s ease-out;
+}
+
+.markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6 {
+    /* lh-title */
+    line-height: 1.25;
+}
+
+.markdown pre {
+    background-color: var(--theme);
+    /* pre f6 pa1 */
+    overflow-x: auto;
+    overflow-y: hidden;
+    overflow: scroll;
+    padding: .25rem;
+}
+
+.markdown code {
+    background-color: var(--theme);
+    /* pl1 pr1 f6 */
+    padding-left: .25rem;
+    padding-right: .25rem;
+    font-size: .875rem;
+}
+
+.markdown pre > code {
+    /* p0 */
+    padding: 0;
+}
+
+.markdown blockquote {
+    border-color: var(--theme);
+    /* ml1 bl bw3 pl3 */
+    margin-left: .25rem;
+    border-left-style: solid;
+    border-width: .5rem;
+    padding-left: 1rem;
+}

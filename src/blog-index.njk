@@ -1,0 +1,23 @@
+---
+layout: layouts/page.njk
+title: Blog
+permalink: /blog/
+---
+
+<h1 class="lh-title measure mt0">
+    $ cat /dev/neill
+</h1>
+<ul class="list measure pl0">
+    {% for post in collections.blog %}
+    <li class="mb4 ml1 bl bw3 pl3 b--theme">
+        <h3 class="lh-title f4 ma0 mb1">
+            <a class="link underline near-black dim" href="{{ post.url }}">
+                {{ post.data.title }}
+            </a>
+        </h3>
+        <div class="lh-title f6">
+            <em>{{ post.data.date.toLocaleDateString() }}</em>
+        </div>
+    </li>
+    {% endfor %}
+</ul>

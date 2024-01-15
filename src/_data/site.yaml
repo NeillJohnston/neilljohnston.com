@@ -1,0 +1,18 @@
+navigation:
+  - label: home
+    href: "/"
+  - label: about
+    href: "/about"
+  - label: blog
+    href: "/blog"
+  - label: projects
+    href: "/projects"
+links:
+  - label: email
+    href: "mailto:neill-remove-this-part-including-the-dashes-please-johnston30@gmail.com"
+  - label: github
+    href: "https://github.com/NeillJohnston/"
+  - label: linkedin
+    href: "http://linkedin.com/in/neilljohnston"
+  - label: mastodon
+    href: "https://hachyderm.io/@neilljohnston"

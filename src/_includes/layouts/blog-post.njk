@@ -1,0 +1,17 @@
+---
+# Markdown blog post
+layout: layouts/page.njk
+---
+
+<article class="mw-100 measure-ns">
+    <h1 class="f1-ns lh-solid mt0 mb2">
+        {{ title }}
+    </h1>
+    <div class="f6">
+        <em>Posted {{ date.toLocaleDateString() }}</em>
+    </div>
+    <hr class="mt3 mb3" />
+    <div class="lh-copy markdown">
+        {{ content | safe }}
+    </div>
+</article>
