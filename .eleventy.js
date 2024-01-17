@@ -1,4 +1,5 @@
 const YAML = require('yaml');
+const mdiFootnote = require('markdown-it-footnote');
 
 module.exports = config => {
     config.addPassthroughCopy('./src/favicon-32.png');
@@ -7,6 +8,8 @@ module.exports = config => {
     // Why does Eleventy support YAML front matter by default, but doesn't come
     // with a YAML parser for data?
     config.addDataExtension('yaml', contents => YAML.parse(contents));
+
+    config.amendLibrary('md', md => md.use(mdiFootnote));
 
     config.addCollection('blog', collection => (
         collection
